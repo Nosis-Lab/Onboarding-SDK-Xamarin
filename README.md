@@ -1,3 +1,14 @@
+# SDK Xamarin del Servicio de Onboarding Digital de Nosis
+
+Nosis Onbarding es una herramienta de validación de identidad a distancia, utilizando los
+servicios de RENAPER para la solicitud de productos online en sitios web y aplicaciones móviles.
+
+Este repo contiene información técnica destinada a ayudar a los desarrolladores a implementar
+el SDK para aplicaciones móviles basadas en Xamarin Forms.
+
+El servicio ofrecido por Nosis es exclusivamente de uso comercial y los ejemplos de este repo
+requieren el uso de una api-key provista por Nosis.
+
 # Guía de uso rápido
 
 El SDK de Onboarding Digital está diseñado para ser utilizado en aplicaciones Xamarin Forms.
@@ -17,9 +28,9 @@ Alternativamente, es posible renombrar el .nupkg a .zip y extraer el componente 
 
 ## Configuración inicial
 
-Antes de comenzar una validación es necesario configurar la API-Key y el grupo de Onboarding, ambos suministrados por Nosis.
+Antes de comenzar una validación es necesario configurar la API-KEY y el grupo de Onboarding, ambos suministrados por Nosis.
 
-También es posible suministrar pantallas de inicio personalizadas que se mostrarán al comenzar la actividad correspondiente.
+Opcionalmente, es posible suministrar pantallas de inicio personalizadas que se mostrarán al comenzar la actividad correspondiente.
 
 ```CSharp
 Onboarding.Current.Settings.ApiKey = "clave-provista-por-nosis-con-formato-guid";
@@ -31,9 +42,9 @@ Onboarding.Settings.BackDniPageBuilder = () => new UserPage("PASO 2\r\nDORSO DNI
 Onboarding.Settings.SelfiePageBuilder = () => new UserPage("PASO 3\r\nSELFIE");
 ```
 
-La ApiKey es necesaria para autenticar y asociar la actividad realizada a un cliente de Nosis.
+La *API-KEY* es necesaria para autenticar y asociar la actividad realizada a un cliente de Nosis.
 
-El GrupoOnb identifica la parametría que se aplicará a las validaciones que se realicen.
+El *GrupoOnb* identifica la parametría que se aplicará a las validaciones que se realicen.
 
 ## Configuración específica para iOS
 
@@ -90,8 +101,53 @@ Una vez finalizada la validación, se podrán examinar los distintos resultados 
 // Onboarding.Current.Selfie.Origin
 // Onboarding.Current.Selfie.AvatarPicture
 ```
+## Personalizar la apariencia
 
-Los valores posibles del campo Status son:
+Algunos elementos visibles del SDK pueden ser personalizados para generar una apariencia homogénea con la app del usuario.
+
+### Barra de navegación
+
+El estilo de la barra de navegación se hereda automáticamente del estilo definido en la app.
+
+```
+<Style TargetType="NavigationPage">
+    <Setter Property="BarBackgroundColor" Value="{StaticResource ColorVioleta}"/>
+    <Setter Property="BarTextColor" Value="White"/>
+</Style>
+```
+
+### Botones primarios y secundarios
+
+Se asigna el color de texto y fondo del botón primario
+
+```
+<Color x:Key="Onb_BotonFondo">#E36600</Color>
+<Color x:Key="Onb_BotonTexto">White</Color>
+```
+
+El botón secundario utiliza el borde del color primario y sin relleno
+
+### Vista de espera
+
+```
+<Color x:Key="Onb_EsperaFondo">#690589</Color>
+<Color x:Key="Onb_EsperaTexto">#E36600</Color>
+```
+
+### Vista de explicación personalizadas
+
+El usuario puede crear sus propias vistas de explicación sobre cada actividad, las cuales
+serán mostradas antes de la explicación animada que ofrece el SDK.
+
+La forma de inyectar las vistas es la siguiente:
+
+```
+Onboarding.Settings.FrontDniPageBuilder = () => new UserPage("PASO 1\r\nFRENTE DNI");
+Onboarding.Settings.BackDniPageBuilder = () => new UserPage("PASO 2\r\nDORSO DNI");
+Onboarding.Settings.SelfiePageBuilder = () => new UserPage("PASO 3\r\nSELFIE");
+```
+
+## Códigos de error
 
 | Status | Descripción |
 |--------|-------------|
