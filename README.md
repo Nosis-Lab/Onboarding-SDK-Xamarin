@@ -11,11 +11,11 @@ requieren el uso de una api-key provista por Nosis.
 
 # Screenshots
 
-[<img src="doc/screenshot_02.jpg" width="250"/>]
-[<img src="doc/screenshot_03.jpg" width="250"/>]
-[<img src="doc/screenshot_04.jpg" width="250"/>]
-[<img src="doc/screenshot_05.jpg" width="250"/>]
-[<img src="doc/screenshot_06.jpg" width="250"/>]
+[<img src="doc/screenshot_02.jpg" width="400"/>]()
+[<img src="doc/screenshot_03.jpg" width="400"/>]()
+
+[<img src="doc/screenshot_04.jpg" width="400"/>]()
+[<img src="doc/screenshot_05.jpg" width="400"/>]()
 
 # Guía de uso rápido
 
