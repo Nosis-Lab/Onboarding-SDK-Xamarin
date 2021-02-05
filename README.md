@@ -9,6 +9,14 @@ el SDK para aplicaciones móviles basadas en Xamarin Forms.
 El servicio ofrecido por Nosis es exclusivamente de uso comercial y los ejemplos de este repo
 requieren el uso de una api-key provista por Nosis.
 
+# Screenshots
+
+[<img src="doc/screenshot_02.jpg" width="250"/>]
+[<img src="doc/screenshot_03.jpg" width="250"/>]
+[<img src="doc/screenshot_04.jpg" width="250"/>]
+[<img src="doc/screenshot_05.jpg" width="250"/>]
+[<img src="doc/screenshot_06.jpg" width="250"/>]
+
 # Guía de uso rápido
 
 El SDK de Onboarding Digital está diseñado para ser utilizado en aplicaciones Xamarin Forms.
