@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleSdk.Views.UserPage"
+             Title="USER PAGE">
+
+    <ContentPage.Content>
+        <Grid Style="{StaticResource Contenedor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Row="0" BorderColor="#E1E1E1" CornerRadius="10" Padding="20" Margin="20" HasShadow="True">
+                <StackLayout Padding="20">
+                    <Label x:Name="lblMessage" FontSize="Large" HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </Frame>
+
+            <StackLayout Grid.Row="1" Padding="20,100,0,20">
+                <Label TextColor="#888888" FontSize="Medium" HorizontalTextAlignment="Center"
+                       Text="Esta página es optativa y está inyectada en el SDK por el usuario" />
+            </StackLayout>
+
+            <Button Grid.Row="2" 
+                    x:Name="btn"  
+                    Clicked="Btn_Clicked"
+                    Style="{StaticResource BotonSiguiente}"
+                    Text="CONTINUAR" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

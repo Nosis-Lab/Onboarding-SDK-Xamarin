@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>175591528776-4bdsir2acca0c0ss0r8upd5vs1a82akl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.175591528776-4bdsir2acca0c0ss0r8upd5vs1a82akl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB8s_B_vKq7hUBkOr8hYNmvJu4pURBz8Ik</string>
+	<key>GCM_SENDER_ID</key>
+	<string>175591528776</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nosis.samplebna</string>
+	<key>PROJECT_ID</key>
+	<string>sample-bna</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sample-bna.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:175591528776:ios:331d35b6ae2b7e88</string>
+	<key>DATABASE_URL</key>
+	<string>https://sample-bna.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleSdk.Views.ResultPage"
+             Title="VALIDACIÓN FINALIZADA">
+
+    <ScrollView>
+        <StackLayout>
+            <Grid>
+                <!-- Fondo verde o gris dependiedo del resultado de la validación -->
+                <Image x:Name="imageFondo" Source="fondo_verde.png" VerticalOptions="StartAndExpand" />
+
+                <!-- Contenedor de imágen y resultado -->
+                <StackLayout VerticalOptions="StartAndExpand" Margin="0,90,0,0">
+                    <Frame HorizontalOptions="CenterAndExpand"  Padding="40,60,40,20" CornerRadius="8">
+                        <StackLayout>
+                            <StackLayout Padding="7,5,7,5" BackgroundColor="White" Margin="0,30,0,0">
+                                <Label x:Name="labelStatus" Text="IDENTIDAD VALIDADA" TextColor="Black" FontAttributes="Bold"
+                                       HorizontalOptions="CenterAndExpand" FontSize="Medium"
+                                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center"
+                                       BackgroundColor="White"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <!-- Imagen circular -->
+                <Frame HasShadow="False" Padding="0" Margin="0,-20,0,0" CornerRadius="150" IsClippedToBounds="true"
+                       VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="White">
+                    <Image x:Name="imageAvatar" Source="img_avatar.png" WidthRequest="120" HeightRequest="120" ></Image>
+                </Frame>
+            </Grid>
+
+            <!-- Textos -->
+            <StackLayout Orientation="Vertical" Padding="30,20,30,20">
+                <Label x:Name="labelNombre" TextColor="Black" HorizontalOptions="Start" 
+                       FontSize="Large" FontAttributes="Bold" Text="Esteban D'Annunzio" />
+                <Label x:Name="labelDni" TextColor="#555555" HorizontalOptions="Start" 
+                       FontSize="Medium" Text="DNI 21.584.185" />
+                <Label x:Name="labelVencimiento" TextColor="#555555" HorizontalOptions="Start" 
+                       FontSize="Medium" Text="Vence el 55/55/5555" />
+                <Label x:Name="labelTramite" TextColor="#555555" HorizontalOptions="Start" 
+                       FontSize="Medium" Text="Número de trámite 12345678" />
+            </StackLayout>
+
+            <!-- Botones -->
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button x:Name="btnDetalle" Text="DETALLE" Style="{StaticResource BotonSiguiente}"
+                    Clicked="ViewDetail_Clicked" CornerRadius="10"/>
+
+                <Button x:Name="btnImagenes" Text="IMÁGENES" Style="{StaticResource BotonSiguiente}" 
+                    Clicked="ViewImages_Clicked"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleSdk.Views.ResultDetailPage"
+             Title="DETALLE">
+    <ScrollView>
+        <StackLayout Padding="40">
+            <Label Text="Resultado general" FontSize="Large" FontAttributes="Bold" />
+            <Label x:Name="labelNovedadResult" />
+            <Label x:Name="labelResultDni" Text="DNI" FontSize="Large" FontAttributes="Bold"/>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Documento Ingresado: " FontAttributes="Bold" />
+                        <Span x:Name="labelEntered" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label x:Name="labelResultPhoto" Text="Foto" FontAttributes="Bold"/>
+            <Label x:Name="labelResultPhotoDetail"/>
+            <Label x:Name="labelResultBarcode" Text="Código de Barras" FontAttributes="Bold"/>
+            <Label x:Name="labelResultBarcodeDetail"/>
+            <Label x:Name="labelResultMrz" Text="MRZ" FontAttributes="Bold"/>
+            <Label x:Name="labelResultMrzDetail"/>
+
+            <Label x:Name="labelResultSelfie" Text="Selfie" FontSize="Large" FontAttributes="Bold"/>
+            <Label x:Name="labelResultDetailSelfie" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
