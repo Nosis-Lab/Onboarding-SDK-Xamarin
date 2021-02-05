@@ -96,26 +96,30 @@ Los valores posibles del campo Status son:
 | Status | Descripción |
 |--------|-------------|
 | OK | Todas las validaciones fueron superadas satisfactoriamente en el servidor |
-| BLOQUEADO | La persona superó la cantidad de intentos diarios permitidos |
+| ABANDONADO | La persona no completó la validación |
+| LIMITE_GENERAL | Superó la cantidad de validaciones diarias permitidas |
+| LIMITE_ACIERTOS | Superó la cantidad de validaciones correctas que puede hacer en un día |
+| LIMITE_FALLOS | Superó la cantidad de intentos fallidos que puede hacer en un día |
 | ERR_SERVIDOR | Error interno en el servidor |
-| DNI_FOTO_NO_ENCONTRADA | El scanner no encontró la foto del DNI |
-| DNI_PDF417_NO_ENCONTRADO | El scanner no encontró el PDF417 del DNI |
-| DNI_MRZ_NO_ENCONTRADO | El scanner no encontró el MRZ del DNI |
 | DNI_ESTRUCTURA_INVALIDA | La ubicación de los elementos no coincide con ninguna de versión conocida de DNI |
-| DNI_DATOS_INVALIDOS | Los datos encontrados en el DNI no coinciden entre si o con los datos registrados en RENAPER |
-| DNI_FOTO_INVALIDA | La foto del documento no coincide con la selfie suministrada |
+| DNI_FOTO_NO_ENCONTRADA | El scanner no encontró la foto del DNI |
+| DNI_FOTO_INVALIDA | La foto del documento no coincide con la selfie suministrada (obsoleto) |
+| DNI_PDF417_NO_ENCONTRADO | El scanner no encontró el PDF417 del DNI |
 | DNI_PDF417_INVALIDO | El formato del PDF417 no es reconocido |
+| DNI_MRZ_NO_ENCONTRADO | El scanner no encontró el MRZ del DNI |
 | DNI_MRZ_INVALIDO | El formato del MRZ no es reconocido o difieren los dígitos verificadores |
-| DNI_NO_VIGENTE | El DNI no está vigente en RENAPER |
+| DNI_DATOS_INVALIDOS | Los datos encontrados en el DNI no coinciden entre si o con los datos registrados en RENAPER |
+| DNI_NO_VIGENTE | El DNI no está vigente en RENAPER o la fecha de vencimiento ha expirado |
 | SELFIE_PRUEBA_INVALIDA | La persona no completó los desafíos de prueba de vida |
+| SELFIE_ESCENA_NO_COINCIDE | Las selfies tomadas tienen fondos distintos |
+| SELFIE_NEUTRAL_NO_ENCONTRADA | No se encontró un rostro neutral en la selfie |
 | SELFIE_NEUTRAL_NO_COINCIDE | La selfie tomada no corresponde a la persona en cuestión |
+| SELFIE_SONRISA_NO_ENCONTRADA | No se encontró un rostro sonriendo en la selfie |
 | SELFIE_SONRISA_NO_COINCIDE | La selfie sonriendo no se corresponde con la selfie neutral |
+| SELFIE_OJOSCERRADOS_NO_ENCONTRADA | No se encuentra un rostro con ambos ojos cerrados en la selfie |
+| SELFIE_OJOSCERRADOS_NO_COINCIDE |	El rostro con ojos cerrados no coincide con el rostro neutral |
+| SELFIE_MOV_NO_ENCONTRADA | No se encontró un giro de cabeza en la selfie |
 | SELFIE_MOV_NO_COINCIDE | La selfie en movimiento no se corresponde con la selfie neutral |
-| SELFIE_NEUTRAL_NO_ENCONTRADA | No se encontró una selfie neutral en la foto |
-| SELFIE_SONRISA_NO_ENCONTRADA | No se encontró una selfie sonrisa en la foto |
-| SELFIE_MOV_NO_ENCONTRADA | No se encontró una selfie movimiento en la foto |
-| SELFIE_OJOSCERRADOS_NO_ENCONTRADA | No se encuentra una foto con ojos cerrados |
-| SELFIE_OJOSCERRADOS_NO_COINCIDE |	La selfie con ojos cerrados no coincide con la selfie neutral |
 | SDK_INTERNAL_ERROR | Error interno en el scanner |
 | SDK_SERVER_ERROR | Problema de comunicación con el servidor  |
 | SDK_PHOTO_NOT_FOUND | Scanner de DNI no pudo encontrar la foto  |
@@ -130,5 +134,3 @@ Los valores posibles del campo Status son:
 | SDK_WAITING_GESTURE | Scanner de selfie finalizó esperando gesto |
 | SDK_GESTURE_FAILED | Scanner de selfie finalizó luego de un gesto fallido |
 | SDK_FINAL_POSE | Scanner de selfie finalizó mientras esperaba pose final |
-
-
