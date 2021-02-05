@@ -17,11 +17,7 @@ requieren el uso de una api-key provista por Nosis.
 [<img src="doc/screenshot_04.jpg" width="400"/>]()
 [<img src="doc/screenshot_05.jpg" width="400"/>]()
 
-# Guía de uso rápido
-
-El SDK de Onboarding Digital está diseñado para ser utilizado en aplicaciones Xamarin Forms.
-
-## Instalación
+# Instalación
 
 El SDK se distribuye en un empaquetdo de NuGet, el mismo puede ser incorporado a un feed privado
 de la empresa o un feed apuntando a un path local del equipo.
@@ -34,7 +30,7 @@ PM> install-package Nosis.Onboarding.SdkForms
 
 Alternativamente, es posible renombrar el .nupkg a .zip y extraer el componente directamente.
 
-## Configuración inicial
+# Configuración inicial
 
 Antes de comenzar una validación es necesario configurar la API-KEY y el grupo de Onboarding, ambos suministrados por Nosis.
 
@@ -58,7 +54,7 @@ El *GrupoOnb* identifica la parametría que se aplicará a las validaciones que 
 
 Solo en el proyecto de iOS, es necesario agregar los recursos que se distribuyen en Resources_iOS.zip
 
-## Inicio de nueva validación
+# Inicio de nueva validación
 
 Estando en una página de navegación de Xamarin, se comienza la actividad de Onboarding Digital
 de la siguiente manera:
@@ -94,7 +90,7 @@ private async Task ValidationCompleted()
 }
 ```
 
-## Resultado de una validación
+# Resultado de una validación
 
 Una vez finalizada la validación, se podrán examinar los distintos resultados obtenidos en el objeto de Onboarding.
 
@@ -109,11 +105,11 @@ Una vez finalizada la validación, se podrán examinar los distintos resultados 
 // Onboarding.Current.Selfie.Origin
 // Onboarding.Current.Selfie.AvatarPicture
 ```
-## Personalizar la apariencia
+# Personalizar la apariencia
 
 Algunos elementos visibles del SDK pueden ser personalizados para generar una apariencia homogénea con la app del usuario.
 
-### Barra de navegación
+## Barra de navegación
 
 El estilo de la barra de navegación se hereda automáticamente del estilo definido en la app.
 
@@ -124,7 +120,7 @@ El estilo de la barra de navegación se hereda automáticamente del estilo defin
 </Style>
 ```
 
-### Botones primarios y secundarios
+## Botones primarios y secundarios
 
 Se asigna el color de texto y fondo del botón primario
 
@@ -135,14 +131,16 @@ Se asigna el color de texto y fondo del botón primario
 
 El botón secundario utiliza el borde del color primario y sin relleno
 
-### Vista de espera
+## Vista de espera
+
+La vista de espera se muestra siempre que el SDK accede al servidor de Nosis
 
 ```
 <Color x:Key="Onb_EsperaFondo">#690589</Color>
 <Color x:Key="Onb_EsperaTexto">#E36600</Color>
 ```
 
-### Vista de explicación personalizadas
+## Vista de explicación personalizadas
 
 El usuario puede crear sus propias vistas de explicación sobre cada actividad, las cuales
 serán mostradas antes de la explicación animada que ofrece el SDK.
@@ -155,7 +153,7 @@ Onboarding.Settings.BackDniPageBuilder = () => new UserPage("PASO 2\r\nDORSO DNI
 Onboarding.Settings.SelfiePageBuilder = () => new UserPage("PASO 3\r\nSELFIE");
 ```
 
-## Códigos de error
+# Códigos de error
 
 | Status | Descripción |
 |--------|-------------|
